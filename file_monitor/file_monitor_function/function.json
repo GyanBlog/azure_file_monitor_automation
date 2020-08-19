@@ -1,0 +1,20 @@
+{
+  "bindings": [
+    {
+      "name": "myBlob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "<StorageContainerName>/{name}",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "sendGrid",
+      "direction": "out",
+      "extension": {
+        "id": "Microsoft.Azure.WebJobs.Extensions.SendGrid", "version": "3.0.0"
+      },
+      "name": "$return",
+      "apiKey": "FILE_MONITOR_SENDGRID_APIKEY"
+  }
+  ]
+}
